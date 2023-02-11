@@ -1,21 +1,21 @@
 import React, {useContext} from "react";
 import "./WorkExperience.scss";
 import ExperienceCard from "../../components/experienceCard/ExperienceCard";
-import {workExperiences} from "../../portfolio";
+import {nonworkExperiences} from "../../portfolio";
 import {Fade} from "react-reveal";
 import StyleContext from "../../contexts/StyleContext";
 
-export default function WorkExperience() {
+export default function NonWorkExperience() {
   const {isDark} = useContext(StyleContext);
-  if (workExperiences.display) {
+  if (nonworkExperiences.display) {
     return (
-      <a id="tech">
+      <div id="nontech">
         <Fade bottom duration={1000} distance="20px">
           <div className="experience-container" id="workExperience">
             <div>
-              <h1 className="experience-heading">Technical Events</h1>
+              <h1 className="experience-heading">Non Technical Events</h1>
               <div className="experience-cards-div">
-                {workExperiences.experience.map((card, i) => {
+                {nonworkExperiences.experience.map((card, i) => {
                   return (
                     <ExperienceCard
                       key={i}
@@ -35,7 +35,7 @@ export default function WorkExperience() {
             </div>
           </div>
         </Fade>
-      </a>
+      </div>
     );
   }
   return null;

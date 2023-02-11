@@ -68,6 +68,7 @@ export default function Blogs() {
                     <BlogCard
                       key={i}
                       isDark={isDark}
+                      id={i}
                       blog={{
                         url: blog.url,
                         image: blog.image,
@@ -81,6 +82,7 @@ export default function Blogs() {
                   return (
                     <BlogCard
                       key={i}
+                      id={i}
                       isDark={isDark}
                       blog={{
                         url: blog.link,

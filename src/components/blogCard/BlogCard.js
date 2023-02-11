@@ -1,7 +1,7 @@
 import React from "react";
 import "./BlogCard.scss";
 
-export default function BlogCard({blog, isDark}) {
+export default function BlogCard({blog, isDark, id}) {
   function openUrlInNewTab(url, name) {
     if (!url) {
       console.log(`URL for ${name} not found`);
@@ -18,7 +18,7 @@ export default function BlogCard({blog, isDark}) {
           className={
             isDark ? "dark-mode blog-card blog-card-shadow" : "blog-card"
           }
-          href="#blog"
+          href={id === 0 ? "#tech" : "#nontech"}
         >
           <h3 className={isDark ? "small-dark blog-title" : "blog-title"}>
             {blog.title}

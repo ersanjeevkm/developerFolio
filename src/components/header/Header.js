@@ -26,9 +26,14 @@ function Header() {
     <Headroom>
       <header className={isDark ? "dark-menu header" : "header"}>
         <a href="/" className="logo">
-          <span className="grey-color"> &lt;</span>
-          <span className="logo-name">{greeting.username}</span>
-          <span className="grey-color">/&gt;</span>
+          <span className="logo-name">
+            <img
+              src="https://cseaceg.org.in/sync/assets/img/sync.png"
+              alt="Pinacle"
+              width="110"
+              height="110"
+            ></img>
+          </span>
         </a>
         <input className="menu-btn" type="checkbox" id="menu-btn" />
         <label
@@ -41,36 +46,21 @@ function Header() {
         <ul className={isDark ? "dark-menu menu" : "menu"}>
           {viewSkills && (
             <li>
-              <a href="#skills">Skills</a>
-            </li>
-          )}
-          {viewExperience && (
-            <li>
-              <a href="#experience">Work Experiences</a>
-            </li>
-          )}
-          {viewOpenSource && (
-            <li>
-              <a href="#opensource">Open Source</a>
-            </li>
-          )}
-          {viewAchievement && (
-            <li>
-              <a href="#achievements">Achievements</a>
+              <a href="#skills">About</a>
             </li>
           )}
           {viewBlog && (
             <li>
-              <a href="#blogs">Blogs</a>
+              <a href="#blogs">Events</a>
             </li>
           )}
-          {viewTalks && (
+          {viewAchievement && (
             <li>
-              <a href="#talks">Talks</a>
+              <a href="#achievements">Sponsors</a>
             </li>
           )}
           <li>
-            <a href="#contact">Contact Me</a>
+            <a href="#contact">Contact Us</a>
           </li>
           <li>
             {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}

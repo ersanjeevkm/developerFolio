@@ -3,7 +3,7 @@ import "./Skills.scss";
 import SoftwareSkill from "../../components/softwareSkills/SoftwareSkill";
 import {illustration, skillsSection} from "../../portfolio";
 import {Fade} from "react-reveal";
-import codingPerson from "../../assets/lottie/codingPerson";
+import Build from "../../assets/lottie/build";
 import DisplayLottie from "../../components/displayLottie/DisplayLottie";
 import StyleContext from "../../contexts/StyleContext";
 
@@ -16,14 +16,14 @@ export default function Skills() {
     <div className={isDark ? "dark-mode main" : "main"} id="skills">
       <div className="skills-main-div">
         <Fade left duration={1000}>
-          <div className="skills-image-div">
+          <div className="skills-image">
             {illustration.animated ? (
-              <DisplayLottie animationData={codingPerson} />
+              <DisplayLottie animationData={Build} />
             ) : (
               <img
-                alt="Man Working"
-                src={require("../../assets/images/developerActivity.svg")}
-              ></img>
+                alt="Skills"
+                src={require("../../assets/images/skill.svg")}
+              />
             )}
           </div>
         </Fade>
@@ -43,7 +43,6 @@ export default function Skills() {
             >
               {skillsSection.subTitle}
             </p>
-            <SoftwareSkill />
             <div>
               {skillsSection.skills.map((skills, i) => {
                 return (
