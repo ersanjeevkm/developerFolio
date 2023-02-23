@@ -1,11 +1,5 @@
-/* Change this file to get your personal Portfolio */
-
-// To change portfolio colors globally go to the  _globalColor.scss file
-
 import emoji from "react-easy-emoji";
 import splashAnimation from "./assets/lottie/splashAnimation"; // Rename to your file name for custom animation
-
-// Splash Screen
 
 const splashScreen = {
   enabled: true, // set false to disable splash screen
@@ -45,7 +39,7 @@ const socialMediaLinks = {
 
 // Skills Section
 
-const skillsSection = {
+const about = {
   title: "What do we do",
   subTitle:
     "Sync is an intra-college symposium hosted by the Department of Computer Science. It is conducted with the notion of aggrandizing the intellect and kindling the passion for computer science in budding engineers. Sync promotes inter-department collaboration and interdisciplinary activities. Apart from technical events, it focuses on other nontechnical events to maintain the perfect equilibrium between tech and non-tech events. This year, we have decided to have the events around Digital Sustainability. Sync ‘22 is about to blossom afresh on 28th and 29th of November, 2022. Encompassing multifarious events, this version has the benchmark features to enthrall the multitude, albeit in a sustainable manner. Every experience brings a greater clarity of vision and thus with the past experiences, Sync ‘22 is all set to reach further horizons.",
@@ -60,7 +54,7 @@ https://fontawesome.com/icons?d=gallery */
 
 // Education Section
 
-const educationInfo = {
+const desc = {
   display: true, // Set false to hide this section, defaults to true
   schools: [
     {
@@ -82,7 +76,7 @@ const educationInfo = {
   ]
 };
 
-const blogSection = {
+const events = {
   title: "Events",
   subtitle:
     "With Love for Developing cool stuff, I love to write and teach others what I have learnt.",
@@ -104,8 +98,8 @@ const blogSection = {
   display: true // Set false to hide this section, defaults to true
 };
 
-const workExperiences = {
-  display: true, //Set it to true to show workExperiences Section
+const techEvents = {
+  display: true, //Set it to true to show techEvents Section
   experience: [
     {
       role: "Software Engineer",
@@ -156,8 +150,8 @@ const workExperiences = {
   ]
 };
 
-const nonworkExperiences = {
-  display: true, //Set it to true to show workExperiences Section
+const nontechEvents = {
+  display: true, //Set it to true to show techEvents Section
   experience: [
     {
       role: "Software Engineer",
@@ -208,12 +202,12 @@ const nonworkExperiences = {
   ]
 };
 
-const achievementSection = {
+const sponsors = {
   title: "Our Sponsors",
   subtitle:
     "Achievements, Certifications, Award Letters and Some Cool Stuff that I have done !",
 
-  achievementsCards: [
+  cards: [
     {
       title: "Google Code-In Finalist",
       subtitle:
@@ -274,133 +268,16 @@ const contactInfo = {
   email_address: "saadpasta70@gmail.com"
 };
 
-// DO NOT EDITBELOW THIS LINE
-
-const techStack = {
-  viewSkillBars: true, //Set it to true to show Proficiency Section
-  experience: [
-    {
-      Stack: "Frontend/Design", //Insert stack or technology you have experience in
-      progressPercentage: "90%" //Insert relative proficiency in percentage
-    },
-    {
-      Stack: "Backend",
-      progressPercentage: "70%"
-    },
-    {
-      Stack: "Programming",
-      progressPercentage: "60%"
-    }
-  ],
-  displayCodersrank: false // Set true to display codersrank badges section need to changes your username in src/containers/skillProgress/skillProgress.js:17:62, defaults to false
-};
-
-// Work experience section
-
-/* Your Open Source Section to View Your Github Pinned Projects
-To know how to get github key look at readme.md */
-
-const openSource = {
-  showGithubProfile: "true", // Set true or false to show Contact profile using Github, defaults to true
-  display: true // Set false to hide this section, defaults to true
-};
-
-// Some big projects you have worked on
-
-const bigProjects = {
-  title: "Big Projects",
-  subtitle: "SOME STARTUPS AND COMPANIES THAT I HELPED TO CREATE THEIR TECH",
-  projects: [
-    {
-      image: require("./assets/images/saayaHealthLogo.webp"),
-      projectName: "Saayahealth",
-      projectDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-      footerLink: [
-        {
-          name: "Visit Website",
-          url: "http://saayahealth.com/"
-        }
-        //  you can add extra buttons here.
-      ]
-    },
-    {
-      image: require("./assets/images/nextuLogo.webp"),
-      projectName: "Nextu",
-      projectDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-      footerLink: [
-        {
-          name: "Visit Website",
-          url: "http://nextu.se/"
-        }
-      ]
-    }
-  ],
-  display: true // Set false to hide this section, defaults to true
-};
-
-// Achievement Section
-// Include certificates, talks etc
-
-// Blogs Section
-
-// Talks Sections
-
-const talkSection = {
-  title: "TALKS",
-  subtitle: emoji(
-    "I LOVE TO SHARE MY LIMITED KNOWLEDGE AND GET A SPEAKER BADGE 😅"
-  ),
-
-  talks: [
-    {
-      title: "Build Actions For Google Assistant",
-      subtitle: "Codelab at GDG DevFest Karachi 2019",
-      slides_url: "https://bit.ly/saadpasta-slides",
-      event_url: "https://www.facebook.com/events/2339906106275053/"
-    }
-  ],
-  display: true // Set false to hide this section, defaults to true
-};
-
-// Podcast Section
-
-const podcastSection = {
-  title: emoji("Podcast 🎙️"),
-  subtitle: "I LOVE TO TALK ABOUT MYSELF AND TECHNOLOGY",
-
-  // Please Provide with Your Podcast embeded Link
-  podcast: [
-    "https://anchor.fm/codevcast/embed/episodes/DevStory---Saad-Pasta-from-Karachi--Pakistan-e9givv/a-a15itvo"
-  ],
-  display: true // Set false to hide this section, defaults to true
-};
-
-// Twitter Section
-
-const twitterDetails = {
-  userName: "twitter", //Replace "twitter" with your twitter username without @
-  display: true // Set true to display this section, defaults to false
-};
-
-const isHireable = false; // Set false if you are not looking for a job. Also isHireable will be display as Open for opportunities: Yes/No in the GitHub footer
-
 export {
   illustration,
   greeting,
   socialMediaLinks,
   splashScreen,
-  skillsSection,
-  educationInfo,
-  techStack,
-  nonworkExperiences,
-  workExperiences,
-  openSource,
-  bigProjects,
-  achievementSection,
-  blogSection,
-  talkSection,
-  podcastSection,
-  contactInfo,
-  twitterDetails,
-  isHireable
+  about,
+  desc,
+  nontechEvents,
+  techEvents,
+  sponsors,
+  events,
+  contactInfo
 };

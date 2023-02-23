@@ -1,13 +1,13 @@
 import React, {useContext} from "react";
 import "./WorkExperience.scss";
 import ExperienceCard from "../../components/experienceCard/ExperienceCard";
-import {workExperiences} from "../../portfolio";
+import {techEvents} from "../../portfolio";
 import {Fade} from "react-reveal";
 import StyleContext from "../../contexts/StyleContext";
 
 export default function WorkExperience() {
   const {isDark} = useContext(StyleContext);
-  if (workExperiences.display) {
+  if (techEvents.display) {
     return (
       <a id="tech">
         <Fade bottom duration={1000} distance="20px">
@@ -15,7 +15,7 @@ export default function WorkExperience() {
             <div>
               <h1 className="experience-heading">Technical Events</h1>
               <div className="experience-cards-div">
-                {workExperiences.experience.map((card, i) => {
+                {techEvents.experience.map((card, i) => {
                   return (
                     <ExperienceCard
                       key={i}

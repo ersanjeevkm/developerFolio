@@ -1,7 +1,7 @@
 import React, {useContext} from "react";
 import "./Skills.scss";
 import SoftwareSkill from "../../components/softwareSkills/SoftwareSkill";
-import {illustration, skillsSection} from "../../portfolio";
+import {illustration, about} from "../../portfolio";
 import {Fade} from "react-reveal";
 import Build from "../../assets/lottie/build";
 import DisplayLottie from "../../components/displayLottie/DisplayLottie";
@@ -9,7 +9,7 @@ import StyleContext from "../../contexts/StyleContext";
 
 export default function Skills() {
   const {isDark} = useContext(StyleContext);
-  if (!skillsSection.display) {
+  if (!about.display) {
     return null;
   }
   return (
@@ -32,7 +32,7 @@ export default function Skills() {
             <h1
               className={isDark ? "dark-mode skills-heading" : "skills-heading"}
             >
-              {skillsSection.title}{" "}
+              {about.title}{" "}
             </h1>
             <p
               className={
@@ -41,10 +41,10 @@ export default function Skills() {
                   : "subTitle skills-text-subtitle"
               }
             >
-              {skillsSection.subTitle}
+              {about.subTitle}
             </p>
             <div>
-              {skillsSection.skills.map((skills, i) => {
+              {about.skills.map((skills, i) => {
                 return (
                   <p
                     key={i}

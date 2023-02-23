@@ -1,12 +1,12 @@
 import React, {useContext} from "react";
 import "./Achievement.scss";
 import AchievementCard from "../../components/achievementCard/AchievementCard";
-import {achievementSection} from "../../portfolio";
+import {sponsors} from "../../portfolio";
 import {Fade} from "react-reveal";
 import StyleContext from "../../contexts/StyleContext";
 export default function Achievement() {
   const {isDark} = useContext(StyleContext);
-  if (!achievementSection.display) {
+  if (!sponsors.display) {
     return null;
   }
   return (
@@ -21,7 +21,7 @@ export default function Achievement() {
                   : "heading achievement-heading"
               }
             >
-              {achievementSection.title}
+              {sponsors.title}
             </h1>
             <p
               className={
@@ -30,11 +30,11 @@ export default function Achievement() {
                   : "subTitle achievement-subtitle"
               }
             >
-              {achievementSection.subtitle}
+              {sponsors.subtitle}
             </p>
           </div>
           <div className="achievement-cards-div">
-            {achievementSection.achievementsCards.map((card, i) => {
+            {sponsors.cards.map((card, i) => {
               return (
                 <AchievementCard
                   key={i}
